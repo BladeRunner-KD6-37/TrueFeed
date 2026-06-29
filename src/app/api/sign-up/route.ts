@@ -45,7 +45,7 @@ export async  function POST(request:Request){
            const expiryDate = new Date()
            expiryDate.setHours(expiryDate.getHours()+1)
 
-         const newUser =  new UserModel({
+         const newUser =  new UserModel({ //creating new user if already doesn't exists
                 username,
                 email,
                 password : hasedPassword,
